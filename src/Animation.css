@@ -1,0 +1,49 @@
+@keyframes happy {
+    0% {top: 0px}
+    50% {top: 20px;}
+    100% {top: 0px}
+}
+
+@keyframes sad {
+    0% {left: 0px}
+    50% {left: 20px;}
+    100% {left: 0px}
+}
+
+@keyframes angry {
+    0% {top: 0px}
+    50% {top: 10px;}
+    100% {top: 0px}
+}
+
+@keyframes sleepy {
+    0% {top: 0px; left: 0px;}
+    25% {top: 10px; left: 10px;}
+    50% {top: 20px; left: 0px;}
+    75% {top: 10px; left: -10px;}
+    100% {top: 0px; left: 0px;}
+}
+
+.Happy-Emoji {
+    font-size: 50px;
+    position: relative;
+    animation: happy infinite 1.5s linear;
+}
+
+.Sad-Emoji {
+    font-size: 50px;
+    position: relative;
+    animation: sad infinite 1.5s linear;
+}
+
+.Angry-Emoji {
+    font-size: 50px;
+    position: relative;
+    animation: angry infinite 0.2s linear;
+}
+
+.Sleepy-Emoji {
+    font-size: 50px;
+    position: relative;
+    animation: sleepy infinite 1.5s linear;
+}
