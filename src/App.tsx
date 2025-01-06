@@ -1,42 +1,34 @@
 import React, { useState } from 'react';
-import './Animation.css'
-
-const emojis = [
-  {name: 'Happy', value: '😃'}, 
-  {name: 'Sad', value: '😢'}, 
-  {name: 'Angry', value: '😡'}, 
-  {name: 'Sleepy', value: '😴'}]
+import './App.css'
+import { emojis } from './EmojiList';
 
 function App() {
   const [lastEmoji, setLastEmoji] = useState({name: '', value: ''})
-  const [message, setMessage] = useState('')
 
   return (
-    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <div style={{display: 'flex'}}>
+    <div className='Container'>
+      <div className='Emoji-list'>
         {emojis.map((item, index)=>(
           <button  
             key={index} 
-            style={{margin: '20px'}}
+            className='Emoji-button'
             onClick={()=>{
               if (lastEmoji === item && item.value === '😡') {
-                setMessage('Whoa, calm down bro! Want some coffee?')
+                alert('Whoa, calm down bro! Want some coffee?')
               } else {
                 setLastEmoji(item)
-                setMessage('')
               }
             }}
           >
             {item.value}
           </button>
         ))}
-        </div>
-        <p style={{color: 'red'}}>{message}</p>
-        <div
-          className={`${lastEmoji.name}-Emoji`}
-        >
-          {lastEmoji.value}
-        </div>
+      </div>
+      <div
+        className={`${lastEmoji.name}-Emoji`}
+      >
+        {lastEmoji.value}
+      </div>
     </div>
   );
 }

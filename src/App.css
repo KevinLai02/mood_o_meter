@@ -47,3 +47,21 @@
     position: relative;
     animation: sleepy infinite 1.5s linear;
 }
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Emoji-list {
+    display: flex;
+}
+
+.Emoji-button {
+    margin: 20px
+}
+
+.Message {
+    color: red;
+}
